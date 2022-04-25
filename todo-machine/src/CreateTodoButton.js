@@ -2,8 +2,18 @@ import React from "react";
 import './CreateTodoButton.css';
 
 function CreateTodoButton(){
+    const onClickButton = () => {
+        alert("Le diste click")
+    }
+    
+    
     return (
-        <button className="CreateTodoButton">+</button>
+        <button 
+            className="CreateTodoButton"
+            onClick={onClickButton}
+        >
+            +
+        </button>
     );
 }
 

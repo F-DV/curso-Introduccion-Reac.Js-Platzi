@@ -26,8 +26,14 @@ Este curso de basa en React : Componentes y Comportamientos
 - Creamos la estructura de componentes en App
 - Creamos cada componente que utilizaremos basadons en la estructura de App
 
-# Css en React
+# Css basico en React
 - Creamos cada archivo css para cada componente.
 - Los importamos en cada componente.
 - Referenciamos los elementos que vamos a aplicar css con className=?
 - y le damos estilo.
+
+# Manejo de Eventos con React
+- Le creamos al boton un evento onclick que llama la funcion        definida en el componente
+- Creamos las funciones y activamos los onClick para los botones de los items(borrar y marcar como completado)
+- Por el momento solo le ponemos un alert.
+- le damos al input de TodoSearch, la funcionalidad de escuchar lo que escribimos, activando onChange y creando la funcion que acceda al event.target.value
