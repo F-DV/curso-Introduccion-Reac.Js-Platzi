@@ -43,3 +43,20 @@ Este curso de basa en React : Componentes y Comportamientos
 - En TodoSearch agregamos el hook para actualizar el estado cuando el usuario escriba
 - Al input DEBEMOS agregarle la caracteristica value con el estado
 - en onChange llamamos a la funcion que actua sobre setSearchValue
+
+# Contando y Buscando Todos
+- Vamos a pasar el estado de TodoSearch al componente principal App
+- Recibimos el estado por props
+- Creamos estado para los todos.
+- Creamos dos variables, una para filtar cuandos todos estan realizados y otra para contar el total de los todos en lista.
+-> PARTE 2
+- Creamos un array llamado searchTodos y vamos a utilizarla para mostar la lista de todos en pantalla.
+- Creamos un condicional para comparar  el texto de la lista de todos y lo que el usuario esta escribiendo en el buscador para mostar solo los todos que el usuario esta buscando
+
+# Completando y Eliminando TODOs
+- creamos la funcion completeTodo en la cual recibe como parametro un texto
+- Dentro de esta funcion creamos una constante para almacenar el indice del TODO en el cual texto sea igual al texto que se pasa por parametro
+- creamos array llamado newTodos y lo inicializamos con la lista de TODOS actual
+- Luego utilizamos el inice y esta nueva lista para modificarla.
+- y actualizamos la lista de todos con setTodos a la nueva lista modifica
+- Luego la enviamos a a los items para modificar estos ya sea elimando o marcando como completado
