@@ -36,4 +36,10 @@ Este curso de basa en React : Componentes y Comportamientos
 - Le creamos al boton un evento onclick que llama la funcion        definida en el componente
 - Creamos las funciones y activamos los onClick para los botones de los items(borrar y marcar como completado)
 - Por el momento solo le ponemos un alert.
-- le damos al input de TodoSearch, la funcionalidad de escuchar lo que escribimos, activando onChange y creando la funcion que acceda al event.target.value
+- le damos al input de TodoSearch, la funcionalidad de escuchar lo que escribimos, activando onChange y creando la funcion que acceda al event.target.value.
+
+# Manejo del Estado con hooks
+- Los hook son las funciones que empiezan con use
+- En TodoSearch agregamos el hook para actualizar el estado cuando el usuario escriba
+- Al input DEBEMOS agregarle la caracteristica value con el estado
+- en onChange llamamos a la funcion que actua sobre setSearchValue
