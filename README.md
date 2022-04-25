@@ -26,3 +26,8 @@ Este curso de basa en React : Componentes y Comportamientos
 - Creamos la estructura de componentes en App
 - Creamos cada componente que utilizaremos basadons en la estructura de App
 
+# Css en React
+- Creamos cada archivo css para cada componente.
+- Los importamos en cada componente.
+- Referenciamos los elementos que vamos a aplicar css con className=?
+- y le damos estilo.
