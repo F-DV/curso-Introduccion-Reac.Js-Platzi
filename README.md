@@ -142,4 +142,15 @@ Nota: Es una mejor forma de enviar el consumer
 - cambiamos el estado en el componente del boton.
 
 # Cambio de logica para abrir y cerrar el formulario
-- Los actualizados como setOpenModal en su parametro nos permite enviar una funcion, esta funcion tiene acceso al estado previo y de esta manera podemos invertir el estado que tenia
+- Los actualizados como setOpenModal en su parametro nos permite enviar una funcion, esta funcion tiene acceso al estado previo y de esta manera podemos invertir el estado que tenia.
+
+# Formularo para crear Todos
+- Creamos un nuevo componente para dibujar el formulario llamado TodoForm
+- Creamos el formulario y añadimos los botones, utilizamos como input un textarea ya que permite que el texto ingresado se vea mejor
+- Dibujamos el formulario cuando se presiones el boton principal
+- Creamos en el componente las funciones que responderan a los botones de añadir y cancelar
+- Vamos al TodoContext y creamos la funcion para añadir un TODO
+- Enviamos esa funcion creada como props.
+- Capturamos el texto del input textArea
+- lo guardamos como un estado y enviamos el estado a addTodo
+- Cerramos el modal cuando cancele o se añada un nuevo Todo.
