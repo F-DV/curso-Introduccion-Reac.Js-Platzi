@@ -125,3 +125,8 @@ NOTA: Cuando Creamos un hook y devuelve mas de dos parametros, ya no devolvemos 
 - Creamos un provider en el cual enviaremos como valor a todas las variables y exportamos tnato el TodoContext como TodoProvider
 - en App.js envolvemos a AppUI en la etiqueta provider y esta ya tiene acceso a todas las propiedades sin expresarlo explicitamente
 - En AppUI envolvemos al componente TodoList en un consumer y las propiedades que se necesitan dentro de TodoList son enviadas como children
+
+# useContex
+Nota: Es una mejor forma de enviar el consumer
+- Instanciamos  React.useContext(); y traemos las variables, inmediatamente mi componente Todolist tiene acceso a estas
+- Todos los componentes de nuestra aplicacion que estan envultos en el provider tiene acceso a las variables de estado con useContext
