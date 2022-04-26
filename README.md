@@ -130,3 +130,13 @@ NOTA: Cuando Creamos un hook y devuelve mas de dos parametros, ya no devolvemos 
 Nota: Es una mejor forma de enviar el consumer
 - Instanciamos  React.useContext(); y traemos las variables, inmediatamente mi componente Todolist tiene acceso a estas
 - Todos los componentes de nuestra aplicacion que estan envultos en el provider tiene acceso a las variables de estado con useContext
+
+# portales teletransportacion de componentes
+- Vamos a crear el formulario flotante para añadir un nuevo TODO
+- Esto lo hacemos con ReactDOM.createPortal()
+- Añadimos un nuevo div en index.html que representara el formulario
+- Creamos el estado en en contexto inicializado con false
+- y enviamos por provider el estado openModal y setOpenModal
+- Recibimos en la AppUi esos estados y creamos la funcion para actualizar este estado cuadno presionemos el boton
+- Creamos condicional para mostar el modal
+- cambiamos el estado en el componente del boton.
