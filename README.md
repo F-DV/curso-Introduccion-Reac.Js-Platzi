@@ -60,3 +60,11 @@ Este curso de basa en React : Componentes y Comportamientos
 - Luego utilizamos el inice y esta nueva lista para modificarla.
 - y actualizamos la lista de todos con setTodos a la nueva lista modifica
 - Luego la enviamos a a los items para modificar estos ya sea elimando o marcando como completado
+
+# Organizacion de archivos y carpetas
+
+- Creamos una carpeta por cada componente y su css.
+- A cada componente lo renombremos con index.js
+-> PARTE 2
+- separamos de App la UI de la logica, creando el archivo AppUI.js, donde nos encargaremos de la parte grafica
+enviamos los prosps de ./App/index.js y los recibimos en AppUI.js
