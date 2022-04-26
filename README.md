@@ -28,6 +28,9 @@ La principal diferencia entre estas dos, es que el Local Storage no tiene una fe
 - Ejecuta el codigo que tiene dentro justo depues de renderizar
 - para que se ejecute solo en la primera renderizada, le enviamos un array vacio como segundo parametro
 - Podemos enviarle un estado en el array del segundo parametro y el codigo dentro se ejecutara cada que tengamos un cambio en ese estado
+
+# Herramienta para crear la pagina de carga
+- https://skeletonreact.com/
 ---------
 
 ## Commits
@@ -154,3 +157,16 @@ Nota: Es una mejor forma de enviar el consumer
 - Capturamos el texto del input textArea
 - lo guardamos como un estado y enviamos el estado a addTodo
 - Cerramos el modal cuando cancele o se añada un nuevo Todo.
+
+# Loading Skeletons o Paginas de carga
+- Lo primero que vamos a hacer es crear 3 nuevos componentes para trabajarlos independientemente: TodosError, TodosLoading y EmptyTodos.
+- Ya que tenemos estos 3 componentes, ahora vamos a llamarlos desde el componente AppUI para conectarlos con la aplicación.
+- ¡Muy bien! Ahora sí podemos concentrarnos mucho mejor para trabajar el estado de carga de TODOS dentro del componente TodosLoading.
+- Para empezar, voy a crear y conectar un archivo TodosLoading.css para definir los estilos de mi esqueleto:
+
+- Debemos definir qué elementos necesitamos para el esqueleto y luego les daremos estilos con CSS. Como la idea es replicar la estructura de un TODO, vamos a necesitar una cajita para el contenedor del TODO, una cajita para el ícono de completar, otra cajita para el ícono de borrar y una última cajita para el texto.
+- Primero vamos a definir los tamaños y posiciones de cada elemento (tal cual copiando y pegando los estilos del TodoItem.css, pero cambiando los nombres de las clases y descartando las propiedades innecesarias):
+
+- Ahora vamos a todas las cajitas (menos la del texto) para darles un color de fondo con gradiente
+- Luego le configuraremos un tamaño de fondo lo suficientemente grande como para que pueda darla vuelta sin dejar espacios vacíos (400% es más que suficiente).
+- Y finalmente le daremos una animación que cambie la posición del fondo al principio, a la mitad y al final (te recomiendo darle al menos 3 segundos de duración para que tu animación no se vea atropellada, sino por el contrario con un efecto suave e hipnotizante.
