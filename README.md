@@ -16,6 +16,14 @@ Este curso de basa en React : Componentes y Comportamientos
 5) poder contar cuantos Todos no hemos completado 
 6) Poder Borrar Todos  
 
+# Local storage VS Session Storage
+La principal diferencia entre estas dos, es que el Local Storage no tiene una fecha de expiración y está disponible en la web que estamos desarrollando de forma global.Lo interesante del Session Storage es que solo esta disponible ventana actual en la que estamos navegando y solo son accesibles para el dominio actual.
+
+- localStorage.getItem('nombre') :Recibe por parametro el nombre de la     infomacion guardada
+- localStorage.setItem('nombre',JSON.stringify(objeto a guardar)
+
+- NOTA: localStorage solo guarda String, por eso usamos JSON.stringify para convertir a String y JSON.parse para convertir a objeto de nuevo.
+
 ---------
 
 ## Commits
@@ -68,3 +76,14 @@ Este curso de basa en React : Componentes y Comportamientos
 -> PARTE 2
 - separamos de App la UI de la logica, creando el archivo AppUI.js, donde nos encargaremos de la parte grafica
 enviamos los prosps de ./App/index.js y los recibimos en AppUI.js
+
+# Persistencia de Datos de FrontEnd con LocalStorage
+-> PARTE 1(guardar en localStorage)
+-  Creamos constante localStorageItem para traer lo que el navegador tiene en localStorage.
+- Creamos variable parsedTodos para guardar la informacion parseada que tengamos en local Storage
+- Creamos condicional que diga if local Stogae esta vacio, lo inicializamos con un array vacio
+- Else : parseamos lo que este guardado en localstorage y se lo pasamos a la variable parsedTodos que inicializará la lista de TODOS
+
+-> PARTE 2(Persistir los cambios)
+- Creamos una funcion puente llamada saveTodos la cual recibira como parametro la actualizacion de la lista de Todos
+- antes de actualizar la lista con setTodos llamamos la funcion saveTodos la cual guardara esa lista actualizada en el local storage
