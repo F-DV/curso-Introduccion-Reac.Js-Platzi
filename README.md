@@ -115,3 +115,13 @@ NOTA: Cuando Creamos un hook y devuelve mas de dos parametros, ya no devolvemos 
 - si no ocurre ningun error cambiamos loading a false
 - Retornamos un Objeto con las variables que necesitamos en los componentes
 - Enviamos las variables a la AppUI
+
+# React Context
+- Dado que no es practico estar enviado propiedades(props) de componente a componente, vamos a crear un contexto que nos provee de provaider y consumer para compartir el estado por todos los componentes de nuestra aplicacion.
+-> Parte 1
+- Pasamos toda la logica de local Storage a su propio componente.
+- Creamos Carpeta para alojar el contexto.
+- en TodoContext pasamos la logica que crea las variables que se enviaban como props
+- Creamos un provider en el cual enviaremos como valor a todas las variables y exportamos tnato el TodoContext como TodoProvider
+- en App.js envolvemos a AppUI en la etiqueta provider y esta ya tiene acceso a todas las propiedades sin expresarlo explicitamente
+- En AppUI envolvemos al componente TodoList en un consumer y las propiedades que se necesitan dentro de TodoList son enviadas como children
