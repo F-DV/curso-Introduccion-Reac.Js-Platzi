@@ -87,3 +87,11 @@ enviamos los prosps de ./App/index.js y los recibimos en AppUI.js
 -> PARTE 2(Persistir los cambios)
 - Creamos una funcion puente llamada saveTodos la cual recibira como parametro la actualizacion de la lista de Todos
 - antes de actualizar la lista con setTodos llamamos la funcion saveTodos la cual guardara esa lista actualizada en el local storage
+
+# Creamos Hook para la funcionalidad de local Storage
+- Una de las reglas para crear HOOK es empezar el nombre con use
+- Creamos una funcion que se encargara de todo lo que tenga que ver con localstorage
+- Pasamos la logica de local store a esta funcion con nombre mas genericos para usarla para guarda mas infiormacion mas adelante
+- Dentro utilizaremos un useStage de React
+- retornamos un array con las dos variables de estado
+- por ultimo creamos un estado en la funcion App para consume useLocalStorage
