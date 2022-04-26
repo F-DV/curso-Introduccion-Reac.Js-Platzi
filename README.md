@@ -24,6 +24,10 @@ La principal diferencia entre estas dos, es que el Local Storage no tiene una fe
 
 - NOTA: localStorage solo guarda String, por eso usamos JSON.stringify para convertir a String y JSON.parse para convertir a objeto de nuevo.
 
+# UseEffect
+- Ejecuta el codigo que tiene dentro justo depues de renderizar
+- para que se ejecute solo en la primera renderizada, le enviamos un array vacio como segundo parametro
+- Podemos enviarle un estado en el array del segundo parametro y el codigo dentro se ejecutara cada que tengamos un cambio en ese estado
 ---------
 
 ## Commits
@@ -89,9 +93,25 @@ enviamos los prosps de ./App/index.js y los recibimos en AppUI.js
 - antes de actualizar la lista con setTodos llamamos la funcion saveTodos la cual guardara esa lista actualizada en el local storage
 
 # Creamos Hook para la funcionalidad de local Storage
+NOTA: Cuando Creamos un hook y devuelve mas de dos parametros, ya no devolvemos un array si no un objeto.
+
 - Una de las reglas para crear HOOK es empezar el nombre con use
 - Creamos una funcion que se encargara de todo lo que tenga que ver con localstorage
 - Pasamos la logica de local store a esta funcion con nombre mas genericos para usarla para guarda mas infiormacion mas adelante
 - Dentro utilizaremos un useStage de React
 - retornamos un array con las dos variables de estado
 - por ultimo creamos un estado en la funcion App para consume useLocalStorage
+
+# Manejo de Efectos
+- Vamos a la UI y simulamos lo que queremos que haga en este caso que muestre un texto de carga, error o exito.
+- Simulamos las propiedades que esperamos recibir en este casi loading y error
+- en App.js simulamos enviar las propiedades que queremos
+- Modificamos la funcion localStorage, 
+- Creamos las variables de estado que hemos simulado error y loading
+- las inicializamos, error en false y loading en true
+- creamos un useEffect para envoler la funcionalidad del localstorage y le damos un try{}catch
+- Tambien creamos un simulador con un setTimeOut para simular que cargamos algo de alguna API.
+- encaso de que tengamos un error, modificamos la variable de estado setError
+- si no ocurre ningun error cambiamos loading a false
+- Retornamos un Objeto con las variables que necesitamos en los componentes
+- Enviamos las variables a la AppUI
