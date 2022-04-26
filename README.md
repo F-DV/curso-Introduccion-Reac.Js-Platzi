@@ -140,3 +140,6 @@ Nota: Es una mejor forma de enviar el consumer
 - Recibimos en la AppUi esos estados y creamos la funcion para actualizar este estado cuadno presionemos el boton
 - Creamos condicional para mostar el modal
 - cambiamos el estado en el componente del boton.
+
+# Cambio de logica para abrir y cerrar el formulario
+- Los actualizados como setOpenModal en su parametro nos permite enviar una funcion, esta funcion tiene acceso al estado previo y de esta manera podemos invertir el estado que tenia
